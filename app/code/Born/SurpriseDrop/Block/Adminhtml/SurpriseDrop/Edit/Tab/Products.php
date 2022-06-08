@@ -179,19 +179,6 @@ class Products extends Extended
                 'width' => '50px',
             ]
         );
-        $this->addColumn(
-            'position',
-            [
-                'header' => __('Position'),
-                'name' => 'position',
-                'width' => 60,
-                'type' => 'number',
-                'validate_class' => 'validate-number',
-                'index' => 'position',
-                'editable' => true,
-                'edit_only' => true,
-            ]
-        );
 
         return parent::_prepareColumns();
     }

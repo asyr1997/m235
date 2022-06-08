@@ -9,10 +9,6 @@
  */
 -->
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Event/etc/events.xsd">
-    <event name="controller_action_predispatch_checkout_cart_add">
-        <observer name="born_surprisedrop_checkout_cart_add"
-                  instance="Born\SurpriseDrop\Observer\SurpriseDropRestrictAddToCart" />
-    </event>
     <event name="checkout_cart_product_add_after">
         <observer name="born_surprisedrop_checkout_cart_product_add_after"
                   instance="Born\SurpriseDrop\Observer\SurpriseDropSaveToQuoteItem" />
