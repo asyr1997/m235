@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+/**
+ * @package   Born_BinPromotion
+ * @author    Manish Bhojwani <Manish.Bhojwani@BornGroup.com>
+ * @copyright 2022 Copyright Born Group, Inc. http://www.borngroup.com/
+ * @license   http://www.borngroup.com/ Private
+ * @link      http://www.borngroup.com/
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="Born\BinPromotion\Model\Rule\Condition\BinNumberPromotion">
+        <arguments>
+            <argument name="data" xsi:type="array">
+                <item name="form_name" xsi:type="string">sales_rule_form</item>
+            </argument>
+        </arguments>
+    </type>
+    <type name="Born\BinPromotion\Model\Rule\Condition\BankPromotion">
+        <arguments>
+            <argument name="data" xsi:type="array">
+                <item name="form_name" xsi:type="string">sales_rule_form</item>
+            </argument>
+        </arguments>
+    </type>
+    <virtualType name="Born\BinPromotion\Model\ResourceModel\BinPromotion\Grid\Collection"
+                 type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
+        <arguments>
+            <argument name="mainTable" xsi:type="string">bin_promotion</argument>
+            <argument name="resourceModel" xsi:type="string">
+                Born\BinPromotion\Model\ResourceModel\BinPromotion</argument>
+        </arguments>
+    </virtualType>
+    <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+        <arguments>
+            <argument name="collections" xsi:type="array">
+                <item name="binpromotion_grid_listing_data_source" xsi:type="string">
+                    Born\BinPromotion\Model\ResourceModel\BinPromotion\Grid\Collection</item>
+            </argument>
+        </arguments>
+    </type>
+</config>

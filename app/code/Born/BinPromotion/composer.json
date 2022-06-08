@@ -1,0 +1,18 @@
+{
+    "name": "born/module-bin-promotion",
+    "description": "Born BinPromotion Module.",
+    "type": "magento2-module",
+    "version": "1.0.1",
+    "license": "proprietary",
+    "require": {
+        "php": "~7.0.6|7.1.*|7.2.*|7.3.*|7.4.*",
+        "magento/framework": ">100.0",
+        "magento/module-checkout": ">100.0"
+    },
+    "autoload": {
+        "files": [ "registration.php" ],
+        "psr-4": {
+            "Born\\BinPromotion\\": ""
+        }
+    }
+}

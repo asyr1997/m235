@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+/**
+ * @package   Born_BinPromotion
+ * @author    Manish Bhojwani <Manish.Bhojwani@BornGroup.com>
+ * @copyright 2022 Copyright Born Group, Inc. http://www.borngroup.com/
+ * @license   http://www.borngroup.com/ Private
+ * @link      http://www.borngroup.com/
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Event/etc/events.xsd">
+    <event name="salesrule_rule_condition_combine">
+        <observer name="born_bank_promotion_rule"
+                  instance="Born\BinPromotion\Observer\BankPromotionConditionObserver" />
+        <observer name="born_bin_number_promotion_rule"
+                  instance="Born\BinPromotion\Observer\BinNumberPromotionConditionObserver" />
+    </event>
+    <event name="sales_order_place_after">
+        <observer name="born_binpromotion_order_place_after"
+                  instance="Born\BinPromotion\Observer\SalesOrderPlaceObserver" />
+    </event>
+</config>

@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @category  Born_BinPromotion
+ * @author    Kavya Perudi <kavya.perudi@borngroup.com>
+ * @copyright 2022 Copyright Born Group, Inc. http://www.borngroup.com/
+ * @license   http://www.borngroup.com/ Private
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Module/etc/module.xsd">
+    <router id="admin">
+        <route id="binpromotion" frontName="binpromotion">
+            <module name="Born_BinPromotion"/>
+        </route>
+    </router>
+</config>
