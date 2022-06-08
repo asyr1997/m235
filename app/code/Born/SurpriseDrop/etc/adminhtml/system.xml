@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+/**
+ * @package   Born_SurpriseDrop
+ * @author    Manish Bhojwani (Manish.Bhojwani@BornGroup.com)
+ * @copyright 2022 Copyright Born Group, Inc. http://www.borngroup.com/
+ * @license   http://www.borngroup.com/ Private
+ * @link      http://www.borngroup.com/
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="born" sortOrder="99" translate="label">
+            <label>born</label>
+        </tab>
+        <section id="surprisedrop" translate="label" type="text" sortOrder="90" showInDefault="1" showInWebsite="1" showInStore="1">
+            <label>Surprise Drop</label>
+            <tab>born</tab>
+            <resource>Born_SurpriseDrop::config_born_surprisedrop</resource>
+            <group id="general" translate="label" type="text" sortOrder="5" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>General Configuration</label>
+                <field id="is_enable" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Is Enabled?</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+            </group>
+            <group id="message" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Warning Message Configuration</label>
+                <field id="quantity_limit" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Quantity limit message</label>
+                    <comment>Please enter the warning error message here that will display if customer try to add more than one quantity of surprise product in cart.</comment>
+                </field>
+                <field id="already_added" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Product already added to cart message</label>
+                    <comment>Please enter the warning error message here that will display if customer try to add product of same surprise drop event in cart.</comment>
+                </field>
+                <field id="already_purchased" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Already purchased product from an event message</label>
+                    <comment>Please enter the warning error message here that will display if customer try to add product of surprise drop event that already purchased in cart.</comment>
+                </field>
+                <field id="login" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Login message</label>
+                    <comment>Please enter the warning error message here that will display if guest customer try to add surprise drop product in cart.</comment>
+                </field>
+                <field id="reorder" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Reorder message</label>
+                    <comment>Please enter the warning error message here that will display if customer try to reorder the surprise drop product.</comment>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

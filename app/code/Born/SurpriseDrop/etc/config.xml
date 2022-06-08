@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @package   Born_SurpriseDrop
+ * @author    Manish Bhojwani (Manish.Bhojwani@BornGroup.com)
+ * @copyright 2022 Copyright Born Group, Inc. http://www.borngroup.com/
+ * @license   http://www.borngroup.com/ Private
+ * @link      http://www.borngroup.com/
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <surprisedrop>
+            <general>
+                <is_enable>1</is_enable>
+            </general>
+            <message>
+                <quantity_limit><![CDATA[You cannot add more than one quantity of surprise drop product in cart.]]></quantity_limit>
+                <already_added><![CDATA[You cannot add more than one surprise drop product of this event in cart.]]></already_added>
+                <already_purchased><![CDATA[You have already purchased surprise drop product of this event.]]></already_purchased>
+                <login><![CDATA[Please login to add surprise drop product in cart.]]></login>
+                <reorder><![CDATA[Reorder is not allow for Surprise Product.]]></reorder>
+            </message>
+        </surprisedrop>
+    </default>
+    <stores>
+        <idn>
+            <surprisedrop>
+                <message>
+                    <quantity_limit><![CDATA[Anda tidak dapat menambahkan lebih dari satu jumlah produk kejutan di keranjang.]]></quantity_limit>
+                    <already_added><![CDATA[Anda tidak dapat menambahkan lebih dari satu produk kejutan dari acara ini di keranjang.]]></already_added>
+                    <already_purchased><![CDATA[Anda telah membeli produk kejutan dari acara ini.]]></already_purchased>
+                    <login><![CDATA[Silahkan login untuk menambahkan produk kejutan di keranjang.]]></login>
+                    <reorder><![CDATA[Pemesanan ulang tidak memungkinkan untuk Produk Kejutan.]]></reorder>
+                </message>
+            </surprisedrop>
+        </idn>
+    </stores>
+</config>

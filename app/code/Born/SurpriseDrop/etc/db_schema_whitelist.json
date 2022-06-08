@@ -1,0 +1,35 @@
+{
+    "born_surprise_drop": {
+        "column": {
+            "id": true,
+            "title": true,
+            "start_date": true,
+            "end_date": true,
+            "status": true,
+            "created_at": true,
+            "updated_at": true
+        },
+        "constraint": {
+            "PRIMARY": true
+        }
+    },
+    "born_surprise_drop_products": {
+        "column": {
+            "surprise_drop_id": true,
+            "product_id": true
+        },
+        "constraint": {
+            "BORN_SURPRISE_DROP_PRDS_SURPRISE_DROP_ID_BORN_SURPRISE_DROP_ID": true
+        }
+    },
+    "quote_item": {
+        "column": {
+            "surprise_drop_id": true
+        }
+    },
+    "sales_order_item": {
+        "column": {
+            "surprise_drop_id": true
+        }
+    }
+}

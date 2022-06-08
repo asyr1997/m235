@@ -1,0 +1,12 @@
+<!--
+/**
+ * @package   Converse Dark Theme
+ * @author    Vimal Yash <vimal.yash@borngroup.com>
+ * @copyright 2021 Copyright Born Group, Inc. http://www.borngroup.com/
+ * @license   http://www.borngroup.com/ Private
+ */
+-->
+<theme xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Config/etc/theme.xsd">
+    <title>Example</title>
+    <parent>Magento/blank</parent>
+</theme>

@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Born_SurpriseDrop
+ *
+ * PHP version 7.*
+ *
+ * @category  PHP
+ * @package   Born_SurpriseDrop
+ * @author    Born Group <support@borngroup.com>
+ * @copyright 2022 Copyright Born Group, Inc. http://www.borngroup.com/
+ * @license   http://www.borngroup.com/ Private
+ * @link      http://www.borngroup.com/
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Born_SurpriseDrop::SurpriseDrop"
+             title="Surprise Drop"
+             module="Born_SurpriseDrop"
+             sortOrder="10"
+             resource="Born_SurpriseDrop::SurpriseDrop"
+             parent="Magento_Backend::marketing" />
+        <add id="Born_SurpriseDrop::Surprise_Drop"
+             title="Manage Surprise Drop"
+             module="Born_SurpriseDrop"
+             sortOrder="20"
+             action="surprisedrop/surprisedrop/index"
+             parent="Born_SurpriseDrop::SurpriseDrop"
+             resource="Born_SurpriseDrop::Surprise_Drop" />
+    </menu>
+</config>

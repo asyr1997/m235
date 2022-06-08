@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @package   Born_MopRestriction
+ * @author    Manish Bhojwani (Manish.Bhojwani@BornGroup.com)
+ * @copyright 2022 Copyright Born Group, Inc. http://www.borngroup.com/
+ * @license   http://www.borngroup.com/ Private
+ * @link      http://www.borngroup.com/
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:Module/etc/module.xsd">
+    <module name="Born_MopRestriction">
+        <sequence>
+            <module name="Magento_Sales"/>
+        </sequence>
+    </module>
+</config>

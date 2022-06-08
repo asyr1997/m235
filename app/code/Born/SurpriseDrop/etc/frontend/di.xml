@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @package   Born_SurpriseDrop
+ * @author    Manish Bhojwani (Manish.Bhojwani@BornGroup.com)
+ * @copyright 2022 Copyright Born Group, Inc. http://www.borngroup.com/
+ * @license   http://www.borngroup.com/ Private
+ * @link      http://www.borngroup.com/
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="Magento\Checkout\Controller\Sidebar\UpdateItemQty">
+        <plugin name="born_surprisedrop_minicart_quantity_update"
+                type="Born\SurpriseDrop\Plugin\Sidebar\UpdateItemQty" sortOrder="10"/>
+    </type>
+    <type name="Magento\Checkout\Controller\Cart\UpdateItemQty">
+        <plugin name="born_surprisedrop_cart_quantity_update"
+                type="Born\SurpriseDrop\Plugin\Cart\UpdateItemQty" sortOrder="10"/>
+    </type>
+    <preference for="Magento\Wishlist\Controller\Index\Cart"
+                type="Born\SurpriseDrop\Controller\Wishlist\Index\Cart" />
+    <preference for="Magento\Sales\Controller\Order\Reorder"
+                type="Born\SurpriseDrop\Controller\Sales\Order\Reorder" />
+</config>

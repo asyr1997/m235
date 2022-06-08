@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Born_MopRestriction
+ *
+ * PHP version 7.*
+ *
+ * @category  PHP
+ * @package   Born_MopRestriction
+ * @author    Born Group <support@borngroup.com>
+ * @copyright 2022 Copyright Born Group, Inc. http://www.borngroup.com/
+ * @license   http://www.borngroup.com/ Private
+ * @link      http://www.borngroup.com/
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+        <update handle="moprestriction_moprestriction_new"/>
+</page>

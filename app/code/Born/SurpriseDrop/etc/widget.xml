@@ -1,0 +1,61 @@
+<?xml version="1.0" ?>
+<!--
+/**
+ * @package   Born_SurpriseDrop
+ * @author    Manish Bhojwani (Manish.Bhojwani@BornGroup.com)
+ * @copyright 2022 Copyright Born Group, Inc. http://www.borngroup.com/
+ * @license   http://www.borngroup.com/ Private
+ * @link      http://www.borngroup.com/
+ */
+-->
+<widgets xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Widget:etc/widget.xsd">
+    <widget id="born_surprisedrop_widget" class="Born\SurpriseDrop\Block\Widget\SurpriseDrop">
+        <label translate="true">Surprise Drop Product List</label>
+        <description>Select surprise drop event to display related product list.</description>
+        <parameters>
+            <parameter name="event_title" xsi:type="text" required="true"
+                       visible="true" sort_order="10" >
+                <label translate="true">Title</label>
+                <description>Type widget title here.</description>
+            </parameter>
+            <parameter name="event_option" xsi:type="select" required="true"
+                       source_model="Born\SurpriseDrop\Model\Config\Source\SurpriseDropOptions"
+                       visible="true" sort_order="20" >
+                <label translate="true">Surprise Drop Events</label>
+                <description>Select surprise drop event from the list.</description>
+            </parameter>
+            <parameter name="show_pager" xsi:type="select" visible="true"
+                       source_model="Magento\Config\Model\Config\Source\Yesno">
+                <label translate="true">Display Page Control</label>
+            </parameter>
+            <parameter name="products_per_page" xsi:type="text" required="true" visible="true">
+                <label translate="true">Number of Products per Page</label>
+                <depends>
+                    <parameter name="show_pager" value="1" />
+                </depends>
+                <value>5</value>
+            </parameter>
+            <parameter name="products_count" xsi:type="text" required="true" visible="true">
+                <label translate="true">Number of Products to Display</label>
+                <value>10</value>
+            </parameter>
+            <parameter name="template" xsi:type="select" required="true" visible="true">
+                <label translate="true">Template</label>
+                <options>
+                    <option name="default" value="Born_SurpriseDrop::product/widget/grid.phtml" selected="true">
+                        <label translate="true">Products Grid Template</label>
+                    </option>
+                </options>
+            </parameter>
+            <parameter name="cache_lifetime" xsi:type="text" visible="true">
+                <label translate="true">Cache Lifetime (Seconds)</label>
+                <description translate="true">
+                    <![CDATA[Time in seconds between the widget updates.
+                    <br/>If not set, equals to 86400 seconds (24 hours). To update widget instantly, go to Cache Management and clear Blocks HTML Output cache.
+                    <br/>Widget will not show products that begin to match the specified conditions until cache is refreshed.]]>
+                </description>
+            </parameter>
+        </parameters>
+    </widget>
+</widgets>

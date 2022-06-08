@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+/**
+ * Born_SurpriseDrop
+ *
+ * PHP version 7.*
+ *
+ * @category  PHP
+ * @package   Born_SurpriseDrop
+ * @author    Born Group <support@borngroup.com>
+ * @copyright 2022 Copyright Born Group, Inc. http://www.borngroup.com/
+ * @license   http://www.borngroup.com/ Private
+ * @link      http://www.borngroup.com/
+ */
+-->
+<layout xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/layout_generic.xsd">
+    <container name="root" label="Root">
+        <block class="Born\SurpriseDrop\Block\Adminhtml\SurpriseDrop\Edit\Tab\Products"
+               name="surprisedrop.edit.tab.products"/>
+        <block class="Magento\Backend\Block\Widget\Grid\Serializer" name="products_grid_serializer">
+            <arguments>
+                <argument name="grid_block" xsi:type="string">surprisedrop.edit.tab.products</argument>
+                <argument name="callback" xsi:type="string">getSelectedProducts</argument>
+                <argument name="input_element_name" xsi:type="string">products</argument>
+                <argument name="reload_param_name" xsi:type="string">surprisedrop_products</argument>
+            </arguments>
+        </block>
+    </container>
+</layout>

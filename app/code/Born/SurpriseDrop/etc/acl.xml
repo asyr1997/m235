@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @package   Born_SurpriseDrop
+ * @author    Manish Bhojwani (Manish.Bhojwani@BornGroup.com)
+ * @copyright 2022 Copyright Born Group, Inc. http://www.borngroup.com/
+ * @license   http://www.borngroup.com/ Private
+ * @link      http://www.borngroup.com/
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Acl/etc/acl.xsd">
+    <acl>
+        <resources>
+            <resource id="Magento_Backend::admin">
+                <resource id="Magento_Backend::stores">
+                    <resource id="Magento_Backend::stores_settings">
+                        <resource id="Magento_Config::config">
+                            <resource id="Born_SurpriseDrop::config_born_surprisedrop" title="Surprise Drop"/>
+                        </resource>
+                    </resource>
+                </resource>
+                <resource id="Magento_Backend::marketing">
+                    <resource id="Born_SurpriseDrop::SurpriseDrop" title="Surprise Drop" translate="title" sortOrder="10">
+                        <resource id="Born_SurpriseDrop::Surprise_Drop" title="Manage Surprise Drop" translate="title" sortOrder="20" />
+                    </resource>
+                </resource>
+            </resource>
+        </resources>
+    </acl>
+</config>

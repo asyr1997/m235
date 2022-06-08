@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Born_MopRestriction
+ *
+ * PHP version 7.*
+ *
+ * @category  PHP
+ * @package   Born_MopRestriction
+ * @author    Born Group <support@borngroup.com>
+ * @copyright 2022 Copyright Born Group, Inc. http://www.borngroup.com/
+ * @license   http://www.borngroup.com/ Private
+ * @link      http://www.borngroup.com/
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Born_MopRestriction::MopRestriction"
+             title="Mop Restriction"
+             module="Born_MopRestriction"
+             sortOrder="70"
+             resource="Born_MopRestriction::MopRestriction"
+             parent="Magento_Backend::marketing" />
+        <add id="Born_MopRestriction::MopRestriction_Menu"
+             title="Manage Mop Restriction"
+             module="Born_MopRestriction"
+             sortOrder="10"
+             action="moprestriction/moprestriction/index"
+             parent="Born_MopRestriction::MopRestriction"
+             resource="Born_MopRestriction::MopRestriction_Menu" />
+    </menu>
+</config>

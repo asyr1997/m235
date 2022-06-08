@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+/**
+ * Born_SurpriseDrop
+ *
+ * PHP version 7.3
+ *
+ * @category  PHP
+ * @package   Born_SurpriseDrop
+ * @author    Born Group
+ * @copyright 2022 Copyright Born Group, Inc. http://www.borngroup.com/
+ * @license   http://www.borngroup.com/ Private
+ * @link      http://www.borngroup.com/
+ */
+-->
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+    <table name="born_surprise_drop" resource="default" engine="innodb">
+        <column xsi:type="int" name="id" padding="10" unsigned="true" nullable="false"
+                identity="true" comment="ID" />
+        <column xsi:type="varchar" name="title" nullable="false" length="50" comment="Title" />
+        <column xsi:type="timestamp" name="start_date" on_update="false" nullable="true" comment="Start Date"/>
+        <column xsi:type="timestamp" name="end_date" on_update="false" nullable="true" comment="End date"/>
+        <column xsi:type="tinyint" name="status" nullable="false" default="1" comment="Status"/>
+        <column xsi:type="timestamp" name="created_at" on_update="false" nullable="false" default="CURRENT_TIMESTAMP"
+                comment="Created At"/>
+        <column xsi:type="timestamp" name="updated_at" on_update="true" nullable="false" default="CURRENT_TIMESTAMP"
+                comment="Updated At"/>
+        <constraint xsi:type="primary" referenceId="PRIMARY">
+            <column name="id"/>
+        </constraint>
+    </table>
+    <table name="born_surprise_drop_products" resource="default" engine="innodb">
+        <column xsi:type="int" name="surprise_drop_id" identity="false" unsigned="true" padding="10"
+                nullable="true" comment="Surprise Drop ID" />
+        <column xsi:type="int" name="product_id" padding="10" unsigned="false" nullable="false"
+                identity="false" default="0" comment="Product ID" />
+        <constraint xsi:type="foreign" referenceId="BORN_SUPRISE_DROP_PRODUCT_ID_BORN_SURPRISE_DROP_ID"
+                    table="born_surprise_drop_products" column="surprise_drop_id" referenceTable="born_surprise_drop"
+                    referenceColumn="id" onDelete="CASCADE"/>
+    </table>
+    <table name="quote_item" resource="default" engine="innodb">
+        <column xsi:type="int" name="surprise_drop_id" identity="false" unsigned="false" padding="10"
+                nullable="false" comment="Surprise Drop ID" />
+    </table>
+    <table name="sales_order_item" resource="default" engine="innodb">
+        <column xsi:type="int" name="surprise_drop_id" identity="false" unsigned="false" padding="10"
+                nullable="false" comment="Surprise Drop ID" />
+    </table>
+</schema>

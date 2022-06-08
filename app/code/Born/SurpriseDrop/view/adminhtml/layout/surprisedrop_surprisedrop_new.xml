@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Born_SurpriseDrop
+ *
+ * PHP version 7.*
+ *
+ * @category  PHP
+ * @package   Born_SurpriseDrop
+ * @author    Born Group <support@borngroup.com>
+ * @copyright 2022 Copyright Born Group, Inc. http://www.borngroup.com/
+ * @license   http://www.borngroup.com/ Private
+ * @link      http://www.borngroup.com/
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="admin-2columns-left"
+      xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="content">
+            <block class="Born\SurpriseDrop\Block\Adminhtml\SurpriseDrop\Edit" name="surprisedrop_edit"/>
+        </referenceContainer>
+        <referenceContainer name="left">
+            <block class="Born\SurpriseDrop\Block\Adminhtml\SurpriseDrop\Edit\Tabs" name="surprisedrop_edit_tabs">
+            <block class="Born\SurpriseDrop\Block\Adminhtml\SurpriseDrop\Edit\Tab\Main"
+                   name="surprisedrop_edit_tab_main"/>
+                <uiComponent name="born_surprisedrop_form"/>
+                <action method="addTab">
+                    <argument name="name" xsi:type="string">main_section</argument>
+                    <argument name="block" xsi:type="string">surprisedrop_edit_tab_main</argument>
+                </action>
+                <action method="addTab">
+                    <argument name="name" xsi:type="string">surprisedrop_products</argument>
+                    <argument name="block" xsi:type="array">
+                        <item name="label" xsi:type="string">Select Products</item>
+                        <item name="title" xsi:type="string">Select Products</item>
+                        <item name="url" xsi:type="helper"
+                              helper="Born\SurpriseDrop\Helper\Data::getProductsGridUrl"></item>
+                        <item name="class" xsi:type="string">ajax</item>
+                    </argument>
+                </action>
+            </block>
+        </referenceContainer>
+    </body>
+</page>

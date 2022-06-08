@@ -1,0 +1,27 @@
+{
+    "born_quantity_limitor_rules": {
+        "column": {
+            "id": true,
+            "status": true,
+            "title": true,
+            "qty": true,
+            "store": true,
+            "start_date": true,
+            "end_date": true,
+            "created_at": true,
+            "updated_at": true
+        },
+        "constraint": {
+            "PRIMARY": true
+        }
+    },
+    "born_quantity_limitor_rules_products": {
+        "column": {
+            "rule_id": true,
+            "product_id": true
+        },
+        "constraint": {
+            "FK_1BFE279C4C85D59C2EBCC3A685AE3C10": true
+        }
+    }
+}

@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Born_MopRestriction
+ *
+ * PHP version 7.3
+ *
+ * @category  PHP
+ * @package   Born_MopRestriction
+ * @author    Born Group
+ * @copyright 2022 Copyright Born Group, Inc. http://www.borngroup.com/
+ * @license   http://www.borngroup.com/ Private
+ * @link      http://www.borngroup.com/
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+        <arguments>
+            <argument name="collections" xsi:type="array">
+                <item name="born_moprestriction_listing_data_source"
+                      xsi:type="string">
+                    Born\MopRestriction\Model\ResourceModel\MopRestriction\Grid\Collection</item>
+            </argument>
+        </arguments>
+    </type>
+    <virtualType name="Born\MopRestriction\Model\ResourceModel\MopRestriction\Grid\Collection"
+                 type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
+        <arguments>
+            <argument name="mainTable" xsi:type="string">born_mop_restriction</argument>
+            <argument name="resourceModel"
+                      xsi:type="string">Born\MopRestriction\Model\ResourceModel\MopRestriction</argument>
+        </arguments>
+    </virtualType>
+</config>

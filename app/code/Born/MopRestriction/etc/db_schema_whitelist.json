@@ -1,0 +1,27 @@
+{
+    "born_mop_restriction": {
+        "column": {
+            "id": true,
+            "status": true,
+            "title": true,
+            "store": true,
+            "payment_methods": true,
+            "start_date": true,
+            "end_date": true,
+            "created_at": true,
+            "updated_at": true
+        },
+        "constraint": {
+            "PRIMARY": true
+        }
+    },
+    "born_mop_restriction_products": {
+        "column": {
+            "mop_id": true,
+            "product_id": true
+        },
+        "constraint": {
+            "BORN_MOP_RESTRICTION_PRODUCTS_MOP_ID_BORN_MOP_RESTRICTION_ID": true
+        }
+    }
+}

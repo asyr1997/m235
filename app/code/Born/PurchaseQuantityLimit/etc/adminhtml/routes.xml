@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!--
+/**
+* Born_PurchaseQuantityLimit
+*
+* PHP version 7.*
+*
+* @category  PHP
+* @package   Born_PurchaseQuantityLimit
+* @author    Born Group <support@borngroup.com>
+* @copyright 2022 Copyright Born Group, Inc. http://www.borngroup.com/
+* @license   http://www.borngroup.com/ Private
+* @link      http://www.borngroup.com/
+*/
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:Module/etc/module.xsd">
+    <router id="admin">
+        <route id="purchasequantitylimit" frontName="purchasequantitylimit">
+            <module name="Born_PurchaseQuantityLimit"/>
+        </route>
+    </router>
+</config>

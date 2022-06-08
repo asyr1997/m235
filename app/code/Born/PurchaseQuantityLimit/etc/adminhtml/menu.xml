@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Born_PurchaseQuantityLimit
+ *
+ * PHP version 7.*
+ *
+ * @category  PHP
+ * @package   Born_PurchaseQuantityLimit
+ * @author    Born Group <support@borngroup.com>
+ * @copyright 2022 Copyright Born Group, Inc. http://www.borngroup.com/
+ * @license   http://www.borngroup.com/ Private
+ * @link      http://www.borngroup.com/
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Born_PurchaseQuantityLimit::PurchaseQuantityLimit"
+             title="Purchase Quantity Limit"
+             module="Born_PurchaseQuantityLimit"
+             sortOrder="50"
+             resource="Born_PurchaseQuantityLimit::PurchaseQuantityLimit"
+             parent="Magento_Backend::marketing" />
+        <add id="Born_PurchaseQuantityLimit::PurchaseQuantity_Limit"
+             title="Manage Purchase Quantity Limit"
+             module="Born_PurchaseQuantityLimit"
+             sortOrder="10"
+             action="purchasequantitylimit/purchasequantitylimit/index"
+             parent="Born_PurchaseQuantityLimit::PurchaseQuantityLimit"
+             resource="Born_PurchaseQuantityLimit::PurchaseQuantity_Limit" />
+    </menu>
+</config>
